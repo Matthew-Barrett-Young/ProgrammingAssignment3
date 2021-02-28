@@ -56,5 +56,6 @@ rankall <- function(outcome, num = "best") {
         
         # Return data frame of the specified rank in the outcome for each state
         complete_dta_ranked <- complete_dta_ranked[order(complete_dta_ranked$State), ]
+        names(complete_dta_ranked) <- c("hospital", "state", "outcome")
         return(complete_dta_ranked[, 1:2])
 }
